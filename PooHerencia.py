@@ -52,9 +52,10 @@ class Moto(Vehiculos):
               self.enllantar)
 
 #Clase VElectricos
-class VElectricos():
+class VElectricos(Vehiculos):
 
-    def __init__(self):
+    def __init__(self, marca, modelo):
+        super().__init__(marca, modelo)
         self.autonomia = 100
 
     def cargar_energia(self):
@@ -80,5 +81,5 @@ print(mi_furgoneta.carga(True))
 class BicicletaElectrica(VElectricos, Vehiculos):
     pass
 
-#Al instanciar esta clase, le da prioridad al constructor de la primera clase que hereda (Vehiculos)
-mi_bici = BicicletaElectrica()
+#Al instanciar esta clase, le da prioridad al constructor de la primera clase que hereda (VElectricos)
+mi_bici = BicicletaElectrica("Orbea", "hj")
