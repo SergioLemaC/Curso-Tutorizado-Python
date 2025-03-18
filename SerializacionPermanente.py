@@ -10,7 +10,8 @@ class Persona():
         print("Se ha creado una persona nueva con el nombre de:", self.nombre)
 
     def __str__(self):
-        return "{} {} {}".format(self.nombre, self.genero, self.edad)
+        return f"{self.nombre} {self.genero} {self.edad}"
+        #return "{} {} {}".format(self.nombre, self.genero, self.edad)
     
 class ListaPersonas():
 
