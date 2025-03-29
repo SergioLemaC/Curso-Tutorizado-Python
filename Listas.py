@@ -52,3 +52,28 @@ print(mi_lista3[:])
 mi_lista4 = ["Elegante", "Keloke"] * 3
 
 print(mi_lista4[:])
+
+
+#LIST COMPREHENSION
+
+mi_original_list = [0, 1, 2, 3, 4, 5, 6, 7]
+print(mi_original_list)
+
+#Generando listas con un mecanismo rápido, y se modifica en el momento en el que se va creando
+my_range = range(8)
+print(list(my_range))
+
+my_list = [i + 1 for i in range(8)]
+print(my_list)
+
+my_list = [i * 2 for i in range(8)]
+print(my_list)
+
+my_list = [i * i for i in range(8)]
+print(my_list)
+
+def sum_five(number):
+    return number + 5
+
+my_list = [sum_five(i) for i in range(8)]
+print(my_list)
